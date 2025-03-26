@@ -1,0 +1,205 @@
+<!-- 
+ Variable Explanations
+ 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Countdown.css">
+</head>
+
+<body style="background-color: rgb(245, 240, 230);">
+
+    <div
+        style="background-color: rgb(144, 18, 18); font-size: 72px; text-align:center; padding-top:40px; padding-bottom: 40px;">
+        <!-- <img class="picture" src="IsaLogo.png"> -->
+        ISA - International School of Athens Countdowns
+    </div>
+    <div class="parent">
+        <div class="child" id="countdownSeventh"
+            style="background-color: rgb(216, 234, 242); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            Last Day of Classes for GR7-9 & 11
+        </div>
+        <div class="child" id="countdownEaster"
+            style="background-color: rgb(255, 247, 214); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            Easter Break
+        </div>
+        <div class="child" id="countdownAwards"
+            style="background-color: rgb(232, 223, 245); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            Award Ceremony
+        </div>
+        <div class="child" id="countdownEye"
+            style="background-color: rgb(244, 244, 244); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            End-of-Year Examinations for GR7-9 & 11
+        </div>
+        <div class="child" id="countdownEas"
+            style="background-color: rgb(223, 242, 225); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            eAssessment Examinations for GR10
+        </div>
+        <div class="child" id="countdownGraduationCeremony"
+            style="background-color: rgb(253, 232, 207); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            Graduation Ceremony
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="child" id="countdownSecondTerm"
+            style="background-color: rgb(255, 229, 216); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            End-of-Term 2
+        </div>
+        <div class="child" id="countdownThirdTerm"
+            style="background-color: rgb(255, 229, 216); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            End-of-Term 3
+        </div>
+        <div class="child" id="countdownSummerCamp"
+            style="background-color: rgb(242, 214, 0); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            Start of Summer Camp
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="child" id="countdownPrimary"
+            style="background-color: rgb(231, 240, 250); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            End-of-School Year for Primary
+        </div>
+        <div class="child" id="countdownExhibition"
+            style="background-color: rgb(252, 228, 236); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            Grade 6 Exhibition
+        </div>
+        <div class="child" id="countdownGraduation"
+            style="background-color: rgb(255, 217, 204); font-size: 44px; text-align:center; padding-top:80px; padding-bottom: 80px;">
+            Grade 6 Graduation
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    // Set the date we're counting down to
+    var countdownPrimary = new Date("Jul 12, 2025 15:30:00").getTime();
+    var countdownSeventh = new Date("May 28, 2025 15:30:00").getTime();
+    var countdownAwards = new Date("Jun 12, 2025 15:30:00").getTime();
+    var countdownEye = new Date("Jun 2, 2025 8:30:00").getTime();
+    var countdownEaster = new Date("Apr 11, 2025 15:30:00").getTime();
+    var countdownEas = new Date("May 5, 2025 8:30:00").getTime();
+    var countdownSecondTerm = new Date("Apr 17, 2025 15:30:00").getTime();
+    var countdownThirdTerm = new Date("May 28, 2025 15:30:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distancePrm = countdownPrimary - now;
+        var distanceSeg = countdownSeventh - now;
+        var distanceAwd = countdownAwards - now;
+        var distanceEye = countdownEye - now;
+        var distanceEst = countdownEaster - now;
+        var distanceEas = countdownEas - now;
+        var distanceSet = countdownSecondTerm - now;
+        var distanceTht = countdownThirdTerm - now;
+
+        // Time calculations for days, hours, minutes and seconds - Primary
+        var daysPrm = Math.floor(distancePrm / (1000 * 60 * 60 * 24));
+        var hoursPrm = Math.floor((distancePrm % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesPrm = Math.floor((distancePrm % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsPrm = Math.floor((distancePrm % (1000 * 60)) / 1000);
+
+        // Time calculations for days, hours, minutes and seconds - Seventh Grade
+        var daysSeg = Math.floor(distanceSeg / (1000 * 60 * 60 * 24));
+        var hoursSeg = Math.floor((distanceSeg % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesSeg = Math.floor((distanceSeg % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsSeg = Math.floor((distanceSeg % (1000 * 60)) / 1000);
+
+        // Time calculations for days, hours, minutes and seconds - Award Ceremony
+        var daysAwd = Math.floor(distanceAwd / (1000 * 60 * 60 * 24));
+        var hoursAwd = Math.floor((distanceAwd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesAwd = Math.floor((distanceAwd % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsAwd = Math.floor((distanceAwd % (1000 * 60)) / 1000);
+
+        // Time calculations for days, hours, minutes and seconds - End of Year Examinations
+        var daysEye = Math.floor(distanceEye / (1000 * 60 * 60 * 24));
+        var hoursEye = Math.floor((distanceEye % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesEye = Math.floor((distanceEye % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsEye = Math.floor((distanceEye % (1000 * 60)) / 1000);
+
+        // Time calculations for days, hours, minutes and seconds - Easter Break
+        var daysEst = Math.floor(distanceEst / (1000 * 60 * 60 * 24));
+        var hoursEst = Math.floor((distanceEst % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesEst = Math.floor((distanceEst % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsEst = Math.floor((distanceEst % (1000 * 60)) / 1000);
+
+        // Time calculations for days, hours, minutes and seconds - eAssessment Examinations
+        var daysEas = Math.floor(distanceEas / (1000 * 60 * 60 * 24));
+        var hoursEas = Math.floor((distanceEas % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesEas = Math.floor((distanceEas % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsEas = Math.floor((distanceEas % (1000 * 60)) / 1000);
+
+        // Time calculations for days, hours, minutes and seconds - End of Second Term
+        var daysSet = Math.floor(distanceSet / (1000 * 60 * 60 * 24));
+        var hoursSet = Math.floor((distanceSet % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesSet = Math.floor((distanceSet % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsSet = Math.floor((distanceSet % (1000 * 60)) / 1000);
+
+        // Time calculations for days, hours, minutes and seconds - End of Third Term
+        var daysTht = Math.floor(distanceTht / (1000 * 60 * 60 * 24));
+        var hoursTht = Math.floor((distanceTht % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesTht = Math.floor((distanceTht % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsTht = Math.floor((distanceTht % (1000 * 60)) / 1000);
+
+        // Display the result in coresponding divs
+        document.getElementById("countdownPrimary").innerHTML = `End-of-School Year for Primary\n${daysPrm}d ${hoursPrm}h ${minutesPrm}m ${secondsPrm}s`;
+        document.getElementById("countdownSeventh").innerHTML = `Last Day of Classes for GR7-9 & 11\n${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
+        document.getElementById("countdownAwards").innerHTML = `Award Ceremony\n${daysAwd}d ${hoursAwd}h ${minutesAwd}m ${secondsAwd}s`;
+        document.getElementById("countdownEye").innerHTML = `End-of-Year Examinations for GR7-9 & 11\n${daysEye}d ${hoursEye}h ${minutesEye}m ${secondsEye}s`;
+        document.getElementById("countdownEaster").innerHTML = `Easter Break ${daysEst}d ${hoursEst}h ${minutesEst}m ${secondsEst}s`;
+        document.getElementById("countdownEas").innerHTML = `eAssessment Examinations for GR10 ${daysEas}d ${hoursEas}h ${minutesEas}m ${secondsEas}s`;
+
+        // If the count down is finished, log message
+        if (distancePrm < 0) {
+            clearInterval(x);
+            document.getElementById("countdownPrimary").innerHTML = "Primary School is Out!!!";
+        }
+
+        if (distanceSeg < 0) {
+            clearInterval(x);
+            document.getElementById("countdownSeventh").innerHTML = "Grade 7-9 & 11 Classes are Out!!!";
+        }
+
+        if (distanceAwd < 0) {
+            clearInterval(x);
+            document.getElementById("countdownAwards").innerHTML = "Award Ceremony is in Progress or Over!";
+        }
+
+        if (distanceEye < 0) {
+            clearInterval(x);
+            document.getElementById("countdownEye").innerHTML = "End-of-Year Examinations are in Progress or Over!";
+        }
+
+        if (distanceEye < 0) {
+            clearInterval(x);
+            document.getElementById("countdownEaster").innerHTML = "Easter Break is in Progress or Over!";
+        }
+
+        if (distanceEye < 0) {
+            clearInterval(x);
+            document.getElementById("countdownEas").innerHTML = "eAssessment Examinations for GR10 are in Progress or Over!";
+        }
+    }, 1000);
+</script>
+
+</html>
