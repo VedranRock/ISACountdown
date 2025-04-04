@@ -83,6 +83,7 @@ var x = setInterval(function () {
     document.getElementById("countdownEas").innerHTML = `eAssessment Examinations for GR10 ${daysEas}d ${hoursEas}h ${minutesEas}m ${secondsEas}s`;
     document.getElementById("countdownSecondTerm").innerHTML = `End of Second Term ${daysSet}d ${hoursSet}h ${minutesSet}m ${secondsSet}s`;
     document.getElementById("countdownThirdTerm").innerHTML = `End of Third Term ${daysTht}d ${hoursTht}h ${minutesTht}m ${secondsTht}s`;
+    document.getElementById("countdownExhibition").innerHTML = `Grade 6 Exhibition\n${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
 
     // If the count down is finished, log message
     if (distancePrm < 0) {
@@ -115,5 +116,9 @@ var x = setInterval(function () {
 
     if (distanceTht < 0) {
         document.getElementById("countdownThirdTerm").innerHTML = "Third Term is Over!";
+    }
+
+    if (distanceSeg < 0) {
+        document.getElementById("countdownExhibition").innerHTML = "Grade 6 Exhibition is Over!";
     }
 }, 1000);
