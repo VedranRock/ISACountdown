@@ -77,7 +77,8 @@ var x = setInterval(function () {
     // Display the result in coresponding divs
     document.getElementById("countdownPrimary").innerHTML = `End-of-School Year for Primary\n${daysPrm}d ${hoursPrm}h ${minutesPrm}m ${secondsPrm}s`;
     document.getElementById("countdownSeventh").innerHTML = `Last Day of Classes for GR7-9 & 11\n${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
-    document.getElementById("countdownAwards").innerHTML = `Award Ceremony\n${daysAwd}d ${hoursAwd}h ${minutesAwd}m ${secondsAwd}s`;
+    // document.getElementById("countdownAwards").innerHTML = `Award Ceremony\n${daysAwd}d ${hoursAwd}h ${minutesAwd}m ${secondsAwd}s`;
+    document.getElementById("countdownAwards").innerHTML = `Award Ceremony<br>${daysAwd}d ${hoursAwd}h ${minutesAwd}m ${secondsAwd}s`;
     document.getElementById("countdownEye").innerHTML = `End-of-Year Examinations for GR7-9 & 11\n${daysEye}d ${hoursEye}h ${minutesEye}m ${secondsEye}s`;
     document.getElementById("countdownEaster").innerHTML = `Easter Break ${daysEst}d ${hoursEst}h ${minutesEst}m ${secondsEst}s`;
     document.getElementById("countdownEas").innerHTML = `eAssessment Examinations for GR10 ${daysEas}d ${hoursEas}h ${minutesEas}m ${secondsEas}s`;
