@@ -75,16 +75,16 @@ var x = setInterval(function () {
     var secondsTht = Math.floor((distanceTht % (1000 * 60)) / 1000);
 
     // Display the result in coresponding divs
-    document.getElementById("countdownPrimary").innerHTML = `End-of-School Year for Primary\n${daysPrm}d ${hoursPrm}h ${minutesPrm}m ${secondsPrm}s`;
-    document.getElementById("countdownSeventh").innerHTML = `Last Day of Classes for GR7-9 & 11\n${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
+    document.getElementById("countdownPrimary").innerHTML = `End-of-School Year for Primary<br>${daysPrm}d ${hoursPrm}h ${minutesPrm}m ${secondsPrm}s`;
+    document.getElementById("countdownSeventh").innerHTML = `Last Day of Classes for GR7-9 & 11<br>${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
     // document.getElementById("countdownAwards").innerHTML = `Award Ceremony\n${daysAwd}d ${hoursAwd}h ${minutesAwd}m ${secondsAwd}s`;
     document.getElementById("countdownAwards").innerHTML = `Award Ceremony<br>${daysAwd}d ${hoursAwd}h ${minutesAwd}m ${secondsAwd}s`;
-    document.getElementById("countdownEye").innerHTML = `End-of-Year Examinations for GR7-9 & 11\n${daysEye}d ${hoursEye}h ${minutesEye}m ${secondsEye}s`;
-    document.getElementById("countdownEaster").innerHTML = `Easter Break ${daysEst}d ${hoursEst}h ${minutesEst}m ${secondsEst}s`;
-    document.getElementById("countdownEas").innerHTML = `eAssessment Examinations for GR10 ${daysEas}d ${hoursEas}h ${minutesEas}m ${secondsEas}s`;
-    document.getElementById("countdownSecondTerm").innerHTML = `End of Second Term ${daysSet}d ${hoursSet}h ${minutesSet}m ${secondsSet}s`;
-    document.getElementById("countdownThirdTerm").innerHTML = `End of Third Term ${daysTht}d ${hoursTht}h ${minutesTht}m ${secondsTht}s`;
-    document.getElementById("countdownExhibition").innerHTML = `Grade 6 Exhibition\n${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
+    document.getElementById("countdownEye").innerHTML = `End-of-Year Examinations for GR7-9 & 11<br>${daysEye}d ${hoursEye}h ${minutesEye}m ${secondsEye}s`;
+    document.getElementById("countdownEaster").innerHTML = `Easter Break<br>${daysEst}d ${hoursEst}h ${minutesEst}m ${secondsEst}s`;
+    document.getElementById("countdownEas").innerHTML = `eAssessment Examinations for GR10<br>${daysEas}d ${hoursEas}h ${minutesEas}m ${secondsEas}s`;
+    document.getElementById("countdownSecondTerm").innerHTML = `End of Second Term<br>${daysSet}d ${hoursSet}h ${minutesSet}m ${secondsSet}s`;
+    document.getElementById("countdownThirdTerm").innerHTML = `End of Third Term<br>${daysTht}d ${hoursTht}h ${minutesTht}m ${secondsTht}s`;
+    document.getElementById("countdownExhibition").innerHTML = `Grade 6 Exhibition<br>${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
 
     // If the count down is finished, log message
     if (distancePrm < 0) {
