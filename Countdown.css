@@ -13,7 +13,8 @@
 }
 
 .picture {
-  display: inline-flex;
-  float: left;
-  vertical-align: middle;
+  display:block;
+  margin: 0 auto;
+  height: 100px;
+  width: 300px;
 }

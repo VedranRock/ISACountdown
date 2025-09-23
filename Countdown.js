@@ -1,14 +1,15 @@
 // Set the date we're counting down to
-var countdownPrimary = new Date("Jul 12, 2025 15:30:00").getTime();
-var countdownSeventh = new Date("May 28, 2025 15:30:00").getTime();
-var countdownAwards = new Date("Jun 12, 2025 15:30:00").getTime();
-var countdownEye = new Date("Jun 2, 2025 8:30:00").getTime();
-var countdownEaster = new Date("Apr 11, 2025 15:30:00").getTime();
-var countdownEas = new Date("May 5, 2025 8:30:00").getTime();
-var countdownSecondTerm = new Date("Mar 17, 2025 15:30:00").getTime();
-var countdownThirdTerm = new Date("May 28, 2025 15:30:00").getTime();
-var countdownGraduation = new Date("Jun 12, 2025 8:30:00").getTime();
-var countdownExhibition = new Date("May 28, 2025 8:30:00").getTime();
+var countdownPrimary = new Date("Jun 12, 2026 15:30:00").getTime();         // End-of-School Year for Primary
+var countdownSeventh = new Date("Jun 12, 2026 15:30:00").getTime();         // Last Day of Classes for GR7-9 & 11
+var countdownAwards = new Date("May 24, 2026 15:30:00").getTime();          // Award Ceremony
+var countdownEye = new Date("Jun 1, 2026 08:30:00").getTime();              // End-of-Year Examinations for GR7-9 & 11
+var countdownEaster = new Date("Apr 2, 2026 15:30:00").getTime();           // Start of Easter Break
+var countdownEas = new Date("May 4, 2026 08:30:00").getTime();              // eAssessment Examinations for GR10
+var countdownSecondTerm = new Date("Mar 13, 2026 15:30:00").getTime();      // End of Second Term
+var countdownThirdTerm = new Date("Jun 12, 2026 15:30:00").getTime();       // End of Third Term
+var countdownGraduation = new Date("Jun 11, 2026 08:30:00").getTime();      // Grade 6 Graduation
+var countdownExhibition = new Date("May 27, 2026 08:30:00").getTime();      // Grade 6 Exhibition
+var countdownSummerCamp = new Date("Jun 22, 2026 08:30:00").getTime();      // Start of Summer Camp
 
 // Update the count down every 1 second
 var x = setInterval(function () {
