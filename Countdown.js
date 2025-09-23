@@ -100,7 +100,7 @@ var x = setInterval(function () {
     document.getElementById("countdownEas").innerHTML = `eAssessment Examinations for GR10<br>${daysEas}d ${hoursEas}h ${minutesEas}m ${secondsEas}s`;
     document.getElementById("countdownSecondTerm").innerHTML = `End of Second Term<br>${daysSet}d ${hoursSet}h ${minutesSet}m ${secondsSet}s`;
     document.getElementById("countdownThirdTerm").innerHTML = `End of Third Term<br>${daysTht}d ${hoursTht}h ${minutesTht}m ${secondsTht}s`;
-    document.getElementById("countdownThirdTerm").innerHTML = `End of First Term<br>${daysFrt}d ${hoursFrt}h ${minutesFrt}m ${secondsFrt}s`;
+    document.getElementById("countdownFirstTerm").innerHTML = `End of First Term<br>${daysFrt}d ${hoursFrt}h ${minutesFrt}m ${secondsFrt}s`;
     document.getElementById("countdownExhibition").innerHTML = `Grade 6 Exhibition<br>${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
     document.getElementById("countdownThirdTerm").innerHTML = `Start of Summer Camp<br>${daysSmc}d ${hoursSmc}h ${minutesSmc}m ${secondsSmc}s`;
 
