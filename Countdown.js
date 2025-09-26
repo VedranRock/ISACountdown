@@ -11,6 +11,10 @@ var countdownThirdTerm = new Date("Jun 12, 2026 15:30:00").getTime();       // E
 var countdownGraduation = new Date("Jun 11, 2026 08:30:00").getTime();      // Grade 6 Graduation
 var countdownExhibition = new Date("May 27, 2026 08:30:00").getTime();      // Grade 6 Exhibition
 var countdownSummerCamp = new Date("Jun 22, 2026 08:30:00").getTime();      // Start of Summer Camp
+var countdownChristmasBreak = new Date("Dec 20, 2025 08:30:00").getTime();  // Start of Christmas Break
+var countdownMidTermBreak = new Date("Oct 27, 2025 08:30:00").getTime();    // Start of Mid-Term Break
+var countdownCarnivalBreak = new Date("Feb 23, 2026 08:30:00").getTime();   // Start of Carnival Break
+var countdownSummerBreak = new Date("Jun 15, 2026 15:30:00").getTime();     // Start of Summer Break (PYP last day, end of school day)
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -29,6 +33,12 @@ var x = setInterval(function () {
     var distanceSet = countdownSecondTerm - now;
     var distanceTht = countdownThirdTerm - now;
     var distanceSmc = countdownSummerCamp - now;
+    var distanceXms = countdownChristmasBreak - now;
+    var distanceMid = countdownMidTermBreak - now;
+    var distanceCrn = countdownCarnivalBreak - now;
+    var distanceSmr = countdownSummerBreak - now;
+
+
 
     // Time calculations for days, hours, minutes and seconds - Primary
     var daysPrm = Math.floor(distancePrm / (1000 * 60 * 60 * 24));
@@ -71,7 +81,7 @@ var x = setInterval(function () {
     var hoursFrt = Math.floor((distancFrt % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutesFrt = Math.floor((distancFrt % (1000 * 60 * 60)) / (1000 * 60));
     var secondsFrt = Math.floor((distancFrt % (1000 * 60)) / 1000);
-    
+
     // Time calculations for days, hours, minutes and seconds - End of Second Term
     var daysSet = Math.floor(distanceSet / (1000 * 60 * 60 * 24));
     var hoursSet = Math.floor((distanceSet % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -90,6 +100,32 @@ var x = setInterval(function () {
     var minutesSmc = Math.floor((distanceSmc % (1000 * 60 * 60)) / (1000 * 60));
     var secondsSmc = Math.floor((distanceSmc % (1000 * 60)) / 1000);
 
+    // Time calculations for days, hours, minutes and seconds - Christmas Break
+    var daysXms = Math.floor(distanceXms / (1000 * 60 * 60 * 24));
+    var hoursXms = Math.floor((distanceXms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutesXms = Math.floor((distanceXms % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsXms = Math.floor((distanceXms % (1000 * 60)) / 1000);
+
+    // Time calculations for days, hours, minutes and seconds - Mid-Term break
+    var daysMid = Math.floor(distanceMid / (1000 * 60 * 60 * 24));
+    var hoursMid = Math.floor((distanceMid % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutesMid = Math.floor((distanceMid % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsMid = Math.floor((distanceMid % (1000 * 60)) / 1000);
+
+    // Time calculations for days, hours, minutes and seconds - Carnival Break
+    var daysCrn = Math.floor(distanceCrn / (1000 * 60 * 60 * 24));
+    var hoursCrn = Math.floor((distanceCrn % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutesCrn = Math.floor((distanceCrn % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsCrn = Math.floor((distanceCrn % (1000 * 60)) / 1000);
+
+    // Time calculations for days, hours, minutes and seconds - Summer Break
+    var daysSmr = Math.floor(distanceSmr / (1000 * 60 * 60 * 24));
+    var hoursSmr = Math.floor((distanceSmr % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutesSmr = Math.floor((distanceSmr % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsSmr = Math.floor((distanceSmr % (1000 * 60)) / 1000);
+
+
+
     // Display the result in coresponding divs
     document.getElementById("countdownPrimary").innerHTML = `End-of-School Year for Primary<br>${daysPrm}d ${hoursPrm}h ${minutesPrm}m ${secondsPrm}s`;
     document.getElementById("countdownSeventh").innerHTML = `Last Day of Classes for GR7-9 & 11<br>${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
@@ -102,7 +138,12 @@ var x = setInterval(function () {
     document.getElementById("countdownThirdTerm").innerHTML = `End of Third Term<br>${daysTht}d ${hoursTht}h ${minutesTht}m ${secondsTht}s`;
     document.getElementById("countdownFirstTerm").innerHTML = `End of First Term<br>${daysFrt}d ${hoursFrt}h ${minutesFrt}m ${secondsFrt}s`;
     document.getElementById("countdownExhibition").innerHTML = `Grade 6 Exhibition<br>${daysSeg}d ${hoursSeg}h ${minutesSeg}m ${secondsSeg}s`;
-    document.getElementById("countdownThirdTerm").innerHTML = `Start of Summer Camp<br>${daysSmc}d ${hoursSmc}h ${minutesSmc}m ${secondsSmc}s`;
+    document.getElementById("countdownSummerCamp").innerHTML = `Start of Summer Camp<br>${daysSmc}d ${hoursSmc}h ${minutesSmc}m ${secondsSmc}s`;
+    document.getElementById("countdownChristmasBreak").innerHTML = `Christmas Break<br>${daysXms}d ${hoursXms}h ${minutesXms}m ${secondsXms}s`;
+    document.getElementById("countdownMidTermBreak").innerHTML = `Mid-Term Break<br>${daysMid}d ${hoursMid}h ${minutesMid}m ${secondsMid}s`;
+    document.getElementById("countdownCarnivalBreak").innerHTML = `Carnival Break<br>${daysCrn}d ${hoursCrn}h ${minutesCrn}m ${secondsCrn}s`;
+    document.getElementById("countdownSummerBreak").innerHTML = `Start of Summer Break<br>${daysSmr}d ${hoursSmr}h ${minutesSmr}m ${secondsSmr}s`;
+
 
     // If the count down is finished, log message
     if (distancePrm < 0) {
@@ -132,7 +173,7 @@ var x = setInterval(function () {
     if (distanceFrt < 0) {
         document.getElementById("countdownFirstTerm").innerHTML = "First Term is Over!";
     }
-    
+
     if (distanceSet < 0) {
         document.getElementById("countdownSecondTerm").innerHTML = "Second Term is Over!";
     }
@@ -147,5 +188,21 @@ var x = setInterval(function () {
 
     if (distanceSmc < 0) {
         document.getElementById("countdownSummerCamp").innerHTML = "Summer Capm has already begun, or ended!";
+    }
+
+    if (distanceXms < 0) {
+        document.getElementById("countdownChristmasBreak").innerHTML = "Christmas Break is in Progress or Over!";
+    }
+
+    if (distanceMid < 0) {
+        document.getElementById("countdownMidTermBreak").innerHTML = "Mid-Term Break is in Progress or Over!";
+    }
+
+    if (distanceCrn < 0) {
+        document.getElementById("countdownCarnivalBreak").innerHTML = "Carnival Break is in Progress or Over!";
+    }
+
+    if (distanceSmr < 0) {
+        document.getElementById("countdownSummerBreak").innerHTML = "Summer Break has begun!";
     }
 }, 1000);
