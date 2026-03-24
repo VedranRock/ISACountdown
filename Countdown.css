@@ -57,8 +57,9 @@ body {
 .picture {
   display: block;
   margin: 0 auto;
-  height: 80px;
-  width: 424px;
+  padding-top: 20px;
+  height: 120px;
+  width: 636px;
 }
 
 .subheading {
