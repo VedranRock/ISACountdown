@@ -21,7 +21,7 @@ body {
   text-align: center;
   background-color: rgb(232, 223, 245);
   font-size: 44px;
-  padding:50px;
+  padding: 50px;
 }
 
 .childPyp {
@@ -31,7 +31,7 @@ body {
   text-align: center;
   background-color: rgb(231, 240, 250);
   font-size: 44px;
-  padding:50px;
+  padding: 50px;
 }
 
 .childMyp {
@@ -41,7 +41,7 @@ body {
   text-align: center;
   background-color: rgb(216, 234, 242);
   font-size: 44px;
-  padding:50px;
+  padding: 50px;
 }
 
 .childBreak {
@@ -51,7 +51,7 @@ body {
   text-align: center;
   background-color: rgb(255, 229, 216);
   font-size: 44px;
-  padding:50px;
+  padding: 50px;
 }
 
 .picture {
@@ -79,4 +79,21 @@ body {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+footer {
+  background-color: #112549;
+  color: white;
+  padding: 20px 40px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #F3BA1A;
+}
+
+::selection {
+  color: white;
+  background: #F3BA1A;
 }
