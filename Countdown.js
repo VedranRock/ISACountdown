@@ -1,6 +1,6 @@
 // Set the date we're counting down to
 var countdownPrimary = new Date("Jun 12, 2026 15:30:00").getTime();
-var countdownSeventh = new Date("May 28, 2026 15:30:00").getTime();
+var countdownSeventh = new Date("May 27, 2026 15:30:00").getTime();
 var countdownAwards = new Date("May 24, 2026 15:30:00").getTime();
 var countdownEye = new Date("Jun 1, 2026 08:30:00").getTime();
 var countdownEaster = new Date("Apr 2, 2026 15:30:00").getTime();
